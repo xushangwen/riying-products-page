@@ -1,0 +1,94 @@
+/* ============================================================
+   L2 — 小类产品列表页样式
+============================================================ */
+
+/* ── L2 Banner ───────────────────────────────────────────── */
+.l2-banner {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.l2-banner-bg {
+  position: absolute;
+  inset: 0;
+}
+.l2-banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .35;
+}
+.l2-banner-color {
+  position: absolute;
+  inset: 0;
+  /* set via inline style: background: linear-gradient based on cat color */
+}
+.l2-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(10,10,10,.85) 0%, rgba(10,10,10,.4) 60%, rgba(10,10,10,.15) 100%);
+}
+.l2-banner-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+.l2-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  font-size: .75rem;
+  font-weight: 500;
+  color: white;
+  padding: .3rem .875rem;
+  border-radius: 4px;
+  margin-bottom: .875rem;
+  /* background set via inline style */
+}
+.l2-banner-title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -.025em;
+  line-height: 1.15;
+  margin-bottom: .5rem;
+}
+.l2-banner-sub {
+  font-size: .9375rem;
+  color: rgba(255,255,255,.55);
+}
+
+/* ── Product Grid ────────────────────────────────────────── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  min-height: 600px;
+  padding-bottom: 60px;
+  align-content: start;
+}
+
+/* ── Back to All Products Button ──────────────────────────── */
+.l2-back-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 80px;
+}
+
+@media (max-width: 1200px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; min-height: 500px; }
+  .l2-banner { height: 220px; }
+  .l2-back-section { padding: 30px 0 60px; }
+}
+@media (max-width: 480px) {
+  .product-grid { grid-template-columns: 1fr; min-height: 400px; }
+}
