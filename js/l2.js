@@ -17,9 +17,9 @@ function init() {
 
 function setBreadcrumb(cat, sub) {
   document.getElementById('breadcrumb-inner').innerHTML =
-    '<a class="bc-back" href="index.html"><i class="ri-arrow-left-line"></i>\u8fd4\u56de</a>' +
+    '<a class="bc-back" href="index.html"><i class="ri-arrow-left-line"></i>返回</a>' +
     '<div class="bc-divider"></div>' +
-    '<span class="bc-item" onclick="location.href=\'index.html\'">\u4ea7\u54c1\u4e2d\u5fc3</span>' +
+    '<span class="bc-item" onclick="location.href=\'index.html\'">产品中心</span>' +
     '<i class="ri-arrow-right-s-line bc-sep"></i>' +
     '<span class="bc-current">' + sub.name + '</span>';
 }
@@ -27,8 +27,8 @@ function setBreadcrumb(cat, sub) {
 function setBanner(cat, sub) {
   const bannerImg = getSubImg(sub);
   const productCount = sub.products && sub.products.length > 0
-    ? sub.products.length + ' \u6b3e\u4ea7\u54c1'
-    : '\u4ea7\u54c1\u8be6\u60c5\u6574\u7406\u4e2d';
+    ? sub.products.length + ' 款产品'
+    : '产品详情整理中';
 
   document.getElementById('l2-banner').innerHTML =
     '<div class="l2-banner-bg">' +
@@ -52,7 +52,7 @@ function renderProducts(cat, sub) {
       '<div class="page-view">' +
         '<div class="placeholder-state">' +
           '<i class="ri-inbox-line"></i>' +
-          '<p>\u8be6\u7ec6\u4ea7\u54c1\u4fe1\u606f\u6574\u7406\u4e2d\uff0c\u6b22\u8fce\u8054\u7cfb\u6211\u4eec\u83b7\u53d6\u66f4\u591a\u6280\u672f\u8d44\u6599</p>' +
+          '<p>详细产品信息整理中，欢迎联系我们获取更多技术资料</p>' +
         '</div>' +
       '</div>';
     return;

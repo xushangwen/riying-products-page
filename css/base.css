@@ -775,13 +775,6 @@ body {
   .site-footer .address .line {
     display: none;
   }
-}
-@media (max-width: 960px) {
-  .nav-links, .nav-actions { display: none; }
-  .nav-hamburger { display: flex; }
   .container { padding: 0 1.25rem; }
   .main-content { padding: 2rem 1.25rem 5rem; }
-}
-@media (max-width: 480px) {
-  :root { --nav-h: 60px; }
 }

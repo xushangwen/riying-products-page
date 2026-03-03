@@ -18,9 +18,9 @@ function init() {
 function setBreadcrumb(cat, sub, prod) {
   const backUrl = 'subcategory.html?cat=' + cat.id + '&sub=' + sub.id;
   document.getElementById('breadcrumb-inner').innerHTML =
-    '<a class="bc-back" href="' + backUrl + '"><i class="ri-arrow-left-line"></i>\u8fd4\u56de</a>' +
+    '<a class="bc-back" href="' + backUrl + '"><i class="ri-arrow-left-line"></i>返回</a>' +
     '<div class="bc-divider"></div>' +
-    '<span class="bc-item" onclick="location.href=\'index.html\'">\u4ea7\u54c1\u4e2d\u5fc3</span>' +
+    '<span class="bc-item" onclick="location.href=\'index.html\'">产品中心</span>' +
     '<i class="ri-arrow-right-s-line bc-sep"></i>' +
     '<span class="bc-item" onclick="location.href=\'' + backUrl + '\'">' + sub.name + '</span>' +
     '<i class="ri-arrow-right-s-line bc-sep"></i>' +
@@ -35,7 +35,7 @@ function renderDetail(cat, sub, prod) {
   if (prod.description) {
     descBlock =
       '<div class="l3-section">' +
-        '<div class="l3-section-label">\u4ea7\u54c1\u63cf\u8ff0</div>' +
+        '<div class="l3-section-label">产品描述</div>' +
         '<p class="l3-description">' + prod.description + '</p>' +
       '</div>';
   }
@@ -55,7 +55,7 @@ function renderDetail(cat, sub, prod) {
     }).join('');
     featsBlock =
       '<div class="l3-section">' +
-        '<div class="l3-section-label">\u4ea7\u54c1\u7279\u70b9</div>' +
+        '<div class="l3-section-label">产品特点</div>' +
         '<ul class="l3-features">' + items + '</ul>' +
       '</div>';
   }
@@ -66,7 +66,7 @@ function renderDetail(cat, sub, prod) {
     emptyBlock =
       '<div class="placeholder-state">' +
         '<i class="ri-file-list-3-line"></i>' +
-        '<p>\u4ea7\u54c1\u8be6\u7ec6\u89c4\u683c\u6574\u7406\u4e2d\uff0c\u6b22\u8fce\u8054\u7cfb\u6211\u4eec\u83b7\u53d6\u6280\u672f\u53c2\u6570</p>' +
+        '<p>产品详细规格整理中，欢迎联系我们获取技术参数</p>' +
       '</div>';
   }
 
