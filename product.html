@@ -31,7 +31,7 @@
         <div class="lang">
           <div class="now">
             <i class="ri-global-line"></i>
-            <a href="https://www.riyingcorp.com/" style="color: var(--brand); font-weight: 600;">中文</a> / <a href="https://www.riyingcorp.com/eng" target="_blank">EN</a>
+            <a id="lang-zh" href="#">中文</a> / <a id="lang-en" href="#">EN</a>
           </div>
         </div>
         <div class="menu-btn" onclick="document.getElementById('head').classList.toggle('nav-open')">
@@ -166,8 +166,8 @@
         </div>
         <div class="m-wrap container">
           <div class="lang-item">
-            <a class="active" href="https://www.riyingcorp.com/">CN</a>
-            <a href="https://www.riyingcorp.com/eng" target="_blank">EN</a>
+            <a id="m-lang-zh" href="#">CN</a>
+            <a id="m-lang-en" href="#">EN</a>
           </div>
         </div>
       </div>
@@ -220,6 +220,8 @@
     </div>
   </div>
 
+  <script src="js/i18n.js"></script>
+  <script src="js/data-en.js"></script>
   <script src="js/data.js"></script>
   <script src="js/l3.js"></script>
   <script src="js/common.js"></script>

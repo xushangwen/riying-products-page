@@ -5,59 +5,72 @@
 document.addEventListener('DOMContentLoaded', renderL1);
 
 function renderL1() {
-  const app = document.getElementById('app');
+  var app = document.getElementById('app');
+  var en = isEn();
 
-  const sections = DATA.map(cat => {
-    const subCards = cat.subcategories.map(sub => {
-      const hasProducts = sub.products && sub.products.length > 0;
-      
+  var sections = DATA.map(function(cat) {
+    var enCat = getEnCat(cat.id);
+    var catName  = en ? (enCat.name  || cat.name)  : cat.name;
+    var catLabel = en ? (enCat.label || cat.label) : cat.label;
+
+    var subCards = cat.subcategories.map(function(sub) {
+      var enSub   = getEnSub(sub.id);
+      var subName = en ? (enSub.name || sub.name) : sub.name;
+      var hasProducts = sub.products && sub.products.length > 0;
+
       if (hasProducts) {
-        // 有产品：显示数量，跳转子类列表（单款直达详情）
         if (sub.products.length === 1) {
-          const prod = sub.products[0];
+          var prod    = sub.products[0];
+          var enProd  = getEnProd(prod.id);
+          var prodName = en ? (enProd.name || prod.name) : prod.name;
+          var url = 'product.html?cat=' + cat.id + '&sub=' + sub.id + '&id=' + prod.id + (en ? '&lang=en' : '');
           return (
-            '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'product.html?cat=' + cat.id + '&sub=' + sub.id + '&id=' + prod.id + '\')">' +
-              '<div class="prd-img"><img src="' + getImg(prod) + '" alt="' + prod.name + '" loading="lazy"></div>' +
+            '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'' + url + '\')">' +
+              '<div class="prd-img"><img src="' + getImg(prod) + '" alt="' + prodName + '" loading="lazy"></div>' +
               '<div class="prd-body">' +
-                '<div class="prd-name">' + sub.name + '</div>' +
-                '<div class="prd-count">' + prod.name + '</div>' +
-                '<div class="prd-arrow" style="color:' + cat.color + '">查看产品<i class="ri-arrow-right-line"></i></div>' +
+                '<div class="prd-name">' + subName + '</div>' +
+                '<div class="prd-count">' + prodName + '</div>' +
+                '<div class="prd-arrow" style="color:' + cat.color + '">' + t('viewProduct') + '<i class="ri-arrow-right-line"></i></div>' +
               '</div>' +
             '</div>'
           );
         }
-        const countText = sub.products.length + ' 款产品';
+        var countText = t('productCount')(sub.products.length);
+        var url = 'subcategory.html?cat=' + cat.id + '&sub=' + sub.id + (en ? '&lang=en' : '');
         return (
-          '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'subcategory.html?cat=' + cat.id + '&sub=' + sub.id + '\')">' +
-            '<div class="prd-img"><img src="' + getSubImg(sub) + '" alt="' + sub.name + '" loading="lazy"></div>' +
+          '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'' + url + '\')">' +
+            '<div class="prd-img"><img src="' + getSubImg(sub) + '" alt="' + subName + '" loading="lazy"></div>' +
             '<div class="prd-body">' +
-              '<div class="prd-name">' + sub.name + '</div>' +
+              '<div class="prd-name">' + subName + '</div>' +
               '<div class="prd-count">' + countText + '</div>' +
-              '<div class="prd-arrow" style="color:' + cat.color + '">查看详情<i class="ri-arrow-right-line"></i></div>' +
+              '<div class="prd-arrow" style="color:' + cat.color + '">' + t('viewDetail') + '<i class="ri-arrow-right-line"></i></div>' +
             '</div>' +
           '</div>'
         );
       } else {
-        // 无产品：从同大类其他子类借一款产品展示
-        const borrowedProd = findFirstProductInCat(cat, sub.id);
+        var borrowedProd = findFirstProductInCat(cat, sub.id);
         if (borrowedProd) {
+          var bp    = borrowedProd.product;
+          var enBp  = getEnProd(bp.id);
+          var bpName = en ? (enBp.name || bp.name) : bp.name;
+          var url = 'product.html?cat=' + cat.id + '&sub=' + borrowedProd.subId + '&id=' + bp.id + (en ? '&lang=en' : '');
           return (
-            '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'product.html?cat=' + cat.id + '&sub=' + borrowedProd.subId + '&id=' + borrowedProd.product.id + '\')">' +
-              '<div class="prd-img"><img src="' + getImg(borrowedProd.product) + '" alt="' + borrowedProd.product.name + '" loading="lazy"></div>' +
+            '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'' + url + '\')">' +
+              '<div class="prd-img"><img src="' + getImg(bp) + '" alt="' + bpName + '" loading="lazy"></div>' +
               '<div class="prd-body">' +
-                '<div class="prd-name">' + borrowedProd.product.name + '</div>' +
-                '<div class="prd-count">' + sub.name + '</div>' +
-                '<div class="prd-arrow" style="color:' + cat.color + '">查看产品<i class="ri-arrow-right-line"></i></div>' +
+                '<div class="prd-name">' + bpName + '</div>' +
+                '<div class="prd-count">' + subName + '</div>' +
+                '<div class="prd-arrow" style="color:' + cat.color + '">' + t('viewProduct') + '<i class="ri-arrow-right-line"></i></div>' +
               '</div>' +
             '</div>'
           );
         } else {
           return (
             '<div class="prd-card" style="--card-accent:' + cat.color + '">' +
-              '<div class="prd-img"><img src="' + FALLBACK_IMG + '" alt="' + sub.name + '" loading="lazy"></div>' +
+              '<div class="prd-img"><img src="' + FALLBACK_IMG + '" alt="' + subName + '" loading="lazy"></div>' +
               '<div class="prd-body">' +
-                '<div class="prd-name">' + sub.name + '</div>' +
-                '<div class="prd-count">暂无产品</div>' +
+                '<div class="prd-name">' + subName + '</div>' +
+                '<div class="prd-count">' + t('noProduct') + '</div>' +
               '</div>' +
             '</div>'
           );
@@ -69,10 +82,10 @@ function renderL1() {
       '<section class="cat-section" id="category-' + cat.id + '">' +
         '<div class="cat-header">' +
           '<div class="cat-icon-pill" style="color:' + cat.color + ';background:' + cat.colorBg + ';border-color:' + cat.colorBorder + '">' +
-            '<i class="' + cat.icon + '"></i>' + cat.name +
+            '<i class="' + cat.icon + '"></i>' + catName +
           '</div>' +
           '<div class="cat-title-group">' +
-            '<div class="cat-name">' + cat.label + '</div>' +
+            '<div class="cat-name">' + catLabel + '</div>' +
           '</div>' +
         '</div>' +
         '<div class="sub-grid">' + subCards + '</div>' +
@@ -83,9 +96,9 @@ function renderL1() {
   app.innerHTML = '<div class="page-view">' + sections + '</div>';
 }
 
-// 从同大类其他子类找第一款产品
 function findFirstProductInCat(cat, excludeSubId) {
-  for (const sub of cat.subcategories) {
+  for (var i = 0; i < cat.subcategories.length; i++) {
+    var sub = cat.subcategories[i];
     if (sub.id === excludeSubId) continue;
     if (sub.products && sub.products.length > 0) {
       return { subId: sub.id, product: sub.products[0] };

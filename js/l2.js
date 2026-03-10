@@ -5,10 +5,11 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  const p   = getParams();
-  const cat = findCat(p.get('cat'));
-  const sub = findSub(cat, p.get('sub'));
-  if (!cat || !sub) { location.href = 'index.html'; return; }
+  var p   = getParams();
+  var cat = findCat(p.get('cat'));
+  var sub = findSub(cat, p.get('sub'));
+  var indexUrl = isEn() ? 'index.html?lang=en' : 'index.html';
+  if (!cat || !sub) { location.href = indexUrl; return; }
 
   setBreadcrumb(cat, sub);
   setBanner(cat, sub);
@@ -16,19 +17,28 @@ function init() {
 }
 
 function setBreadcrumb(cat, sub) {
+  var en = isEn();
+  var enSub = getEnSub(sub.id);
+  var subName = en ? (enSub.name || sub.name) : sub.name;
+  var indexUrl = en ? 'index.html?lang=en' : 'index.html';
   document.getElementById('breadcrumb-inner').innerHTML =
-    '<a class="bc-back" href="index.html"><i class="ri-arrow-left-line"></i>返回</a>' +
+    '<a class="bc-back" href="' + indexUrl + '"><i class="ri-arrow-left-line"></i>' + t('backBtn') + '</a>' +
     '<div class="bc-divider"></div>' +
-    '<span class="bc-item" onclick="location.href=\'index.html\'">产品中心</span>' +
+    '<span class="bc-item" onclick="location.href=\'' + indexUrl + '\'">' + t('productCenter') + '</span>' +
     '<i class="ri-arrow-right-s-line bc-sep"></i>' +
-    '<span class="bc-current">' + sub.name + '</span>';
+    '<span class="bc-current">' + subName + '</span>';
 }
 
 function setBanner(cat, sub) {
-  const bannerImg = getSubImg(sub);
-  const productCount = sub.products && sub.products.length > 0
-    ? sub.products.length + ' 款产品'
-    : '产品详情整理中';
+  var en = isEn();
+  var enCat = getEnCat(cat.id);
+  var enSub = getEnSub(sub.id);
+  var catName = en ? (enCat.name || cat.name) : cat.name;
+  var subName = en ? (enSub.name || sub.name) : sub.name;
+  var bannerImg = getSubImg(sub);
+  var productCount = sub.products && sub.products.length > 0
+    ? t('productCount')(sub.products.length)
+    : (en ? 'Details in preparation' : '产品详情整理中');
 
   document.getElementById('l2-banner').innerHTML =
     '<div class="l2-banner-bg">' +
@@ -37,34 +47,38 @@ function setBanner(cat, sub) {
       '<div class="l2-banner-overlay"></div>' +
     '</div>' +
     '<div class="container l2-banner-content">' +
-      '<span class="l2-banner-tag" style="background:' + cat.color + '"><i class="' + cat.icon + '"></i> ' + cat.name + '</span>' +
-      '<h1 class="l2-banner-title">' + sub.name + '</h1>' +
+      '<span class="l2-banner-tag" style="background:' + cat.color + '"><i class="' + cat.icon + '"></i> ' + catName + '</span>' +
+      '<h1 class="l2-banner-title">' + subName + '</h1>' +
       '<p class="l2-banner-sub">' + productCount + '</p>' +
     '</div>';
 }
 
 function renderProducts(cat, sub) {
-  const app  = document.getElementById('app');
-  const prods = sub.products || [];
+  var app   = document.getElementById('app');
+  var prods = sub.products || [];
+  var en    = isEn();
 
   if (!prods.length) {
     app.innerHTML =
       '<div class="page-view">' +
         '<div class="placeholder-state">' +
           '<i class="ri-inbox-line"></i>' +
-          '<p>详细产品信息整理中，欢迎联系我们获取更多技术资料</p>' +
+          '<p>' + t('empty') + '</p>' +
         '</div>' +
       '</div>';
     return;
   }
 
-  const cards = prods.map(function(p) {
+  var cards = prods.map(function(prod) {
+    var enProd  = getEnProd(prod.id);
+    var prodName = en ? (enProd.name || prod.name) : prod.name;
+    var url = 'product.html?cat=' + cat.id + '&sub=' + sub.id + '&id=' + prod.id + (en ? '&lang=en' : '');
     return (
-      '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'product.html?cat=' + cat.id + '&sub=' + sub.id + '&id=' + p.id + '\')">' +
-        '<div class="prd-img"><img src="' + getImg(p) + '" alt="' + p.name + '" loading="lazy"></div>' +
+      '<div class="prd-card" style="--card-accent:' + cat.color + '" onclick="goTo(\'' + url + '\')">' +
+        '<div class="prd-img"><img src="' + getImg(prod) + '" alt="' + prodName + '" loading="lazy"></div>' +
         '<div class="prd-body">' +
-          '<div class="prd-name">' + p.name + '</div>' +
-          '<div class="prd-arrow" style="color:' + cat.color + '">查看详情<i class="ri-arrow-right-line"></i></div>' +
+          '<div class="prd-name">' + prodName + '</div>' +
+          '<div class="prd-arrow" style="color:' + cat.color + '">' + t('viewDetail') + '<i class="ri-arrow-right-line"></i></div>' +
         '</div>' +
       '</div>'
     );

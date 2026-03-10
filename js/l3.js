@@ -5,45 +5,60 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  const p    = getParams();
-  const cat  = findCat(p.get('cat'));
-  const sub  = findSub(cat, p.get('sub'));
-  const prod = findProd(sub, p.get('id'));
-  if (!cat || !sub || !prod) { location.href = 'index.html'; return; }
+  var p    = getParams();
+  var cat  = findCat(p.get('cat'));
+  var sub  = findSub(cat, p.get('sub'));
+  var prod = findProd(sub, p.get('id'));
+  var indexUrl = isEn() ? 'index.html?lang=en' : 'index.html';
+  if (!cat || !sub || !prod) { location.href = indexUrl; return; }
 
   setBreadcrumb(cat, sub, prod);
   renderDetail(cat, sub, prod);
 }
 
 function setBreadcrumb(cat, sub, prod) {
-  const backUrl = 'subcategory.html?cat=' + cat.id + '&sub=' + sub.id;
+  var en = isEn();
+  var enSub  = getEnSub(sub.id);
+  var enProd = getEnProd(prod.id);
+  var subName  = en ? (enSub.name  || sub.name)  : sub.name;
+  var prodName = en ? (enProd.name || prod.name) : prod.name;
+  var langParam = en ? '&lang=en' : '';
+  var indexUrl  = en ? 'index.html?lang=en' : 'index.html';
+  var backUrl   = 'subcategory.html?cat=' + cat.id + '&sub=' + sub.id + langParam;
   document.getElementById('breadcrumb-inner').innerHTML =
-    '<a class="bc-back" href="' + backUrl + '"><i class="ri-arrow-left-line"></i>返回</a>' +
+    '<a class="bc-back" href="' + backUrl + '"><i class="ri-arrow-left-line"></i>' + t('backBtn') + '</a>' +
     '<div class="bc-divider"></div>' +
-    '<span class="bc-item" onclick="location.href=\'index.html\'">产品中心</span>' +
+    '<span class="bc-item" onclick="location.href=\'' + indexUrl + '\'">' + t('productCenter') + '</span>' +
     '<i class="ri-arrow-right-s-line bc-sep"></i>' +
-    '<span class="bc-item" onclick="location.href=\'' + backUrl + '\'">' + sub.name + '</span>' +
+    '<span class="bc-item" onclick="location.href=\'' + backUrl + '\'">' + subName + '</span>' +
     '<i class="ri-arrow-right-s-line bc-sep"></i>' +
-    '<span class="bc-current">' + prod.name + '</span>';
+    '<span class="bc-current">' + prodName + '</span>';
 }
 
 function renderDetail(cat, sub, prod) {
-  const app = document.getElementById('app');
+  var app    = document.getElementById('app');
+  var en     = isEn();
+  var enSub  = getEnSub(sub.id);
+  var enProd = getEnProd(prod.id);
+  var subName  = en ? (enSub.name  || sub.name)  : sub.name;
+  var prodName = en ? (enProd.name || prod.name) : prod.name;
+  var desc     = en ? (enProd.description || prod.description || '') : (prod.description || '');
+  var feats    = en ? (enProd.features    || prod.features    || []) : (prod.features    || []);
 
   // Description block
   var descBlock = '';
-  if (prod.description) {
+  if (desc) {
     descBlock =
       '<div class="l3-section">' +
-        '<div class="l3-section-label">产品描述</div>' +
-        '<p class="l3-description">' + prod.description + '</p>' +
+        '<div class="l3-section-label">' + t('sectionDesc') + '</div>' +
+        '<p class="l3-description">' + desc + '</p>' +
       '</div>';
   }
 
   // Features block
   var featsBlock = '';
-  if (prod.features && prod.features.length) {
-    var items = prod.features.map(function(f, i) {
+  if (feats.length) {
+    var items = feats.map(function(f, i) {
       return (
         '<li class="l3-feat">' +
           '<span class="l3-feat-num" style="color:' + cat.color + ';background:' + cat.colorBg + '">' +
@@ -55,18 +70,18 @@ function renderDetail(cat, sub, prod) {
     }).join('');
     featsBlock =
       '<div class="l3-section">' +
-        '<div class="l3-section-label">产品特点</div>' +
+        '<div class="l3-section-label">' + t('sectionFeats') + '</div>' +
         '<ul class="l3-features">' + items + '</ul>' +
       '</div>';
   }
 
   // Empty state
   var emptyBlock = '';
-  if (!prod.description && (!prod.features || !prod.features.length)) {
+  if (!desc && !feats.length) {
     emptyBlock =
       '<div class="placeholder-state">' +
         '<i class="ri-file-list-3-line"></i>' +
-        '<p>产品详细规格整理中，欢迎联系我们获取技术参数</p>' +
+        '<p>' + t('emptyDetail') + '</p>' +
       '</div>';
   }
 
@@ -75,10 +90,10 @@ function renderDetail(cat, sub, prod) {
   app.innerHTML =
     '<div class="page-view">' +
       '<div class="l3-hero">' +
-        '<img src="' + getImg(prod) + '" alt="' + prod.name + '">' +
+        '<img src="' + getImg(prod) + '" alt="' + prodName + '">' +
         '<div class="l3-hero-label">' +
-          '<div class="l3-hero-cat" style="background:' + cat.color + '"><i class="' + cat.icon + '"></i> ' + sub.name + '</div>' +
-          '<h1 class="l3-hero-name">' + prod.name + '</h1>' +
+          '<div class="l3-hero-cat" style="background:' + cat.color + '"><i class="' + cat.icon + '"></i> ' + subName + '</div>' +
+          '<h1 class="l3-hero-name">' + prodName + '</h1>' +
         '</div>' +
       '</div>' +
       '<div class="l3-body">' +
@@ -95,24 +110,28 @@ function renderDetail(cat, sub, prod) {
 function buildAsideHtml(prod, cat, sub) {
   var prods = (sub && sub.products) || [];
   if (!prods.length) return '';
+  var en = isEn();
+  var langParam = en ? '&lang=en' : '';
 
   var items = prods.map(function(p) {
+    var enP = getEnProd(p.id);
+    var pName = en ? (enP.name || p.name) : p.name;
     var isActive = p.id === prod.id;
     if (isActive) {
       return '<div class="l3-sibling-item l3-sibling-active">' +
-        '<span>' + p.name + '</span>' +
-        '<span class="l3-sibling-badge" style="color:' + cat.color + ';background:' + cat.colorBg + '">当前</span>' +
+        '<span>' + pName + '</span>' +
+        '<span class="l3-sibling-badge" style="color:' + cat.color + ';background:' + cat.colorBg + '">' + t('currentTag') + '</span>' +
       '</div>';
     }
-    var url = 'product.html?cat=' + cat.id + '&sub=' + sub.id + '&id=' + p.id;
+    var url = 'product.html?cat=' + cat.id + '&sub=' + sub.id + '&id=' + p.id + langParam;
     return '<div class="l3-sibling-item" onclick="goTo(\'' + url + '\')">' +
-      '<span>' + p.name + '</span>' +
+      '<span>' + pName + '</span>' +
       '<i class="ri-arrow-right-line"></i>' +
     '</div>';
   }).join('');
 
   return '<div class="l3-aside-card">' +
-    '<div class="l3-aside-title"><i class="' + cat.icon + '" style="color:' + cat.color + '"></i>同系列产品</div>' +
+    '<div class="l3-aside-title"><i class="' + cat.icon + '" style="color:' + cat.color + '"></i>' + t('seriesProducts') + '</div>' +
     items +
   '</div>';
 }
