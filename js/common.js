@@ -43,4 +43,32 @@
       backtop.classList.remove('active');
     }
   });
+
+  // Smooth scroll for anchor links
+  document.addEventListener('click', function (e) {
+    var target = e.target.closest('a[href^="#category-"]');
+    if (!target) return;
+    
+    e.preventDefault();
+    var hash = target.getAttribute('href');
+    var element = document.querySelector(hash);
+    
+    if (element) {
+      // Close mobile nav if open
+      var header = document.getElementById('head');
+      if (header && header.classList.contains('nav-open')) {
+        header.classList.remove('nav-open');
+      }
+      
+      // Smooth scroll to target
+      var headerHeight = 120;
+      var elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      var offsetPosition = elementPosition - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
 }());
