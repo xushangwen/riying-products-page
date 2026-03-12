@@ -1,0 +1,262 @@
+﻿Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+,,,,,
+,,,,,
+,产品分类,产品,产品明细,产品描述,产品特点
+,感知类产品PERCEPTION,温度传感器               Temperature Sensor,水温传感器          ,水温传感器用于监测汽车发动机冷却系统或新能源车电池包冷却水管路内冷却液或冷却水的温度，冷却系统控制模块接收信号并使用控制回路控制调控，提升系统效率。,"1.多种安装方式可选（快插、集成管路、螺纹螺栓等）
+2.更快的响应时间，最快可实现＜3s；
+3.R-T曲线可定制化;
+4.IP67及IP69K的防护性能；"
+,,,Water Temperature Sensor,"The water temperature sensor is used to monitor the temperature of the coolant or cooling water in the automotive engine cooling system or the cooling water pipes of the battery pack in new energy vehicles. The cooling system control module receives the signal and uses a control loop to regulate it, improving system efficiency.",1. Core Features: Self-made NTC resistor for accurate measurement.    2. Response time <3s.                                                                                  3. Customizable R-T curve.                                                                            4. IP67/IP69K protection.
+,,,空气温度传感器,空气温度传感器主要应用于检测车辆外部、乘员舱、空调系统风管等的环境温度，信号用于配合车辆空调系统进行温度调控，提高舒适性。,"1.带风扇的主动式吸风方案可选；
+2.R-T曲线可定制化；
+3.密封接插件可选；"
+,,,Temperature sensor,"The air temperature sensor is mainly used to detect the ambient temperature outside the vehicle, in the passenger compartment, and in the air conditioning system ducts. The signal is used by the vehicle's air conditioning system for temperature control, enhancing comfort.","1. Active air intake solution with a fan is optional.
+2. R-T curve can be customized.
+3. Sealed connectors are optional."
+,,,冷媒传感器,冷媒温度传感器测量HVAC管路高压侧和低压侧的制冷剂介质温度，车辆控制模块通过信号来最大限度地提高暖风、通风与空调系统的性能。,"1.更小的外形尺寸；
+2.更快的响应时间，最快可实现＜3s；
+3.R-T曲线可定制化;
+4.IP67及IP69K的防护性能；"
+,,,Refrigerant Temperature Sensor,"The refrigerant temperature sensor measures the temperature of the refrigerant medium on the high-pressure and low-pressure sides of the HVAC piping. The vehicle control module uses this signal to maximize the performance of the heating, ventilation, and air conditioning system.","1. Smaller form factor.
+2. Faster response time, as fast as <3s.
+3. Customizable R-T curve.
+4. IP67 and IP69K protection ratings."
+,,温湿度传感器 Temperature and Humidity Sensor   ,温湿度传感器, 温湿度传感器安装在前风挡玻璃后视镜支架之间，用于检测车内环境温度、湿度和前档玻璃内表面温度，进行前档玻璃的防雾检测功能。,"1、可检测前挡风玻璃的温度、湿度及露点温度等信号；
+2、支持多种信号传输方式，如LIN/PWM/IIC等；
+3、便携式的安装结构，便携式安装和更换；
+4、更小的外形尺寸；
+5、高精度的温度（±1℃）输出和湿度（±3%RH）输出；"
+,,,Temperature and Humidity Sensor,"The temperature and humidity sensor is installed between the front windshield and the rearview mirror bracket. It is used to detect the cabin's ambient temperature and humidity, as well as the inner surface temperature of the windshield, enabling the anti-fog detection function for the front windshield.","1. Capable of detecting signals such as the temperature, humidity, and dew point temperature of the front windshield.
+2. Supports multiple signal transmission methods, such as LIN/PWM/IIC, etc.
+3. Portable mounting structure for easy installation and replacement.
+4. Smaller form factor.
+5. High-precision temperature (±1°C) and humidity (±3% RH) output."
+,,PM2.5传感器           PM2.5 Sensor,单通道PM2.5传感器,主要用于检测不同颗粒物浓度（PM2.5/PM10），可以将检测的颗粒浓度通过总线传送给空调系统，由空调系统开启对应的净化设备，从而实现空气净化功能。可通过多参数融合算法，全面评估座舱空气健康状态，为智能座舱提供数据支撑，实现自动通风、净化与空调调节联动,"1、采用激光光源与高灵敏度光电探测器，精准识别0.3μm以上颗粒物，符合车规级测量标准。
+2、快速响应，采样响应时间 ≤ 10秒，实时反馈车内空气质量变化
+3、符合车规级设计，工作温度范围 -20℃ ~ +85℃，抗振动、耐高低温，满足汽车电子可靠性要求。
+4、低功耗运行，典型功耗 < 150mW，适配12V车载电源系统。
+5、支持整车LIN2.X、CAN、UART（TTL电平）或PWM输出，便于与智能空调或车机联动。
+6、内置气流导向设计，延长使用寿命，减少维护需求。"
+,,,The single-channel PM2.5 sensor ,"The single-channel PM2.5 sensor is primarily used to detect different particle concentrations (PM2.5/PM10). It transmits the detected particle concentration to the air conditioning system via the bus, which then activates the corresponding purification equipment to achieve air purification. Multi-parameter fusion algorithms can be used to comprehensively assess the cabin air health status, providing data support for the smart cockpit and enabling automatic ventilation, purification, and air conditioning adjustment linkage.","1. Uses a laser light source and high-sensitivity photodetector to accurately identify particles above 0.3μm, meeting automotive-grade measurement standards.
+2. Fast response, sampling response time ≤ 10 seconds, providing real-time feedback on interior air quality changes.
+3. Compliant with automotive-grade design, operating temperature range -20°C ~ +85°C, resistant to vibration, high and low temperatures, meeting automotive electronics reliability requirements.  4. Low power consumption, typically < 150mW, suitable for 12V vehicle power systems.
+5. Supports vehicle LIN2.x, CAN, UART (TTL level), or PWM output, facilitating integration with smart air conditioning or vehicle infotainment systems.
+6. Built-in airflow guidance design extends service life and reduces maintenance needs."
+,,,多功能PM2.5传感器,"主要用于检测不同颗粒物浓度，如PM2.5/PM10的检测，可以将检测的颗粒浓度通过总线传送给空调系统，由空调系统开启对应的净化设备，从而实现空气净化功能；同时可扩展CO2气体检测功能、空气质量指数检测（AQS，基于TVOC/NO2/NH3/CO等）、环境温度与相对湿度检测于一体的多合一的汽车清风系统气体传感器
+。可通过多参数融合算法，全面评估座舱空气健康状态，为智能座舱提供数据支撑，实现自动通风、净化与空调调节联动","1、五合一传感集成：
+　- PM2.5（车内外双通道+激光散射）
+　- CO₂（NDIR红外原理，量程400–10000ppm）
+　- AQS（金属氧化物半导体，感知TVOC/NO2/NH3/CO/硫化物）
+　- 温度（±0.3℃精度）
+　- 湿度（±2%RH精度）
+2、可内置多参数融合算法，输出综合AQS等级（优/良/差），通过智能空气质量评估，提示用户是否需要开启净化或外循环。
+3、符合AEC-Q100标准，EMC/ESD防护强，适应复杂车载电磁环境
+4、低功耗 & 小体积，整机功耗 < 300mW。
+5、支持整车LIN2.X、CAN、UART（TTL电平）或PWM输出，便于与智能空调或车机联动
+6、统一UDS诊断服务，并支持OTA升级"
+,,,The multi-function PM2.5 sensor ,"The multi-function PM2.5 sensor is mainly used to detect different particle concentrations, such as PM2.5/PM10. It transmits the detected particle concentration to the air conditioning system via the bus, which then activates the corresponding purification equipment to purify the air. It is a multi-purpose automotive fresh air system gas sensor that integrates expandable CO₂ gas detection, Air Quality Index (AQS, based on TVOC/NO₂/NH₃/CO, etc.) detection, ambient temperature, and relative humidity detection. Through multi-parameter fusion algorithms, it comprehensively assesses the cabin air health status, providing data support for the smart cockpit and enabling automatic ventilation, purification, and air conditioning adjustment linkage.","1.Five-in-One Sensor Integration:
+　- PM2.5 (dual-channel inside/outside vehicle + laser scattering)
+　- CO₂ (NDIR infrared principle, range 400–10000 ppm)
+　- AQS (Metal Oxide Semiconductor, detects TVOC/NO₂/NH₃/CO/sulfides)
+　- Temperature (±0.3°C accuracy)
+　- Humidity (±2% RH accuracy)"
+,,,,,"2. Built-in multi-parameter fusion algorithm, outputs comprehensive AQS level (Good/Fair/Poor), provides smart air quality assessment, prompting users whether to activate purification or external circulation.
+3. Compliant with AEC-Q100 standard, strong EMC/ESD protection, adapts to complex in-vehicle electromagnetic environments.
+4. Low power consumption & small size, total power consumption < 300 mW.
+5. Supports vehicle LIN2.x, CAN, UART (TTL level), or PWM output, facilitating integration with smart air conditioning or vehicle infotainment systems.
+6. Unified UDS diagnostic services, and supports OTA updates."
+,,雨量传感器           Rainfall Sensor,3合1雨量传感器,雨量传感器用于汽车自动雨刷、灯光、自动空调、除雾功能;同时也为HUD提供光线亮度、雨天自动关窗功能。使驾驶员免除手动操作雨刷、灯光、空调调节、除雾等麻烦，有效地提高了各种环境行车的安全性和驾驶舒适度,"1、支持LIN2.X及SAEJ260协议，与整车通过LIN进行信号交互；
+2、具备自动雨刮、自动阳光、自动大灯控制等功能可选；
+3、雨量功能的感应面积≥120mm2
+4、宽角度的光学检测范围，以及高精度的信号输出
+5、支持雨天关窗、冬季模式、防误刮检查、功能安全策略等功能
+6、定制Bootloader，支持OTA升级"
+,,,The 3-in-1 rain/light sensor,,"1. Supports LIN2.X and SAEJ260 protocols for signal interaction with the vehicle via LIN.
+2. Offers optional functions including automatic wipers, automatic sunlight detection, and automatic headlight control.
+3. Rain-sensing area ≥ 120mm².
+4. Wide-angle optical detection range and high-precision signal output.
+5. Supports functions like rain-sensing window closure, winter mode, false-wipe prevention check, and functional safety strategies.
+6. Custom Bootloader, supports OTA updates."
+,,,5合1雨量传感器,"The light sensor is used for automatic windshield wipers, lights, automatic climate control, and defogging functions; it also provides ambient light levels for the HUD (Head-Up Display) and enables automatic window closure in rainy conditions. It relieves the driver from manually operating the wipers, lights, air conditioning, and defogging, effectively improving driving safety and comfort in various environments.","1、支持LIN2.X及SAEJ260协议，与整车通过LIN进行信号交互；
+2、具备自动雨刮、自动阳光、自动大灯控制，防雾调节、HUD控制等功能可选；
+3、雨量功能的感应面积≥120mm2
+4、宽角度的光学检测范围，以及高精度的信号输出
+5、支持雨天关窗、冬季模式、防误刮检查、功能安全策略等功能
+6、定制Bootloader，支持OTA升级"
+,,,The 5-in-1 rain/light sensor ,,"1. Supports LIN2.X and SAEJ260 protocols for signal interaction with the vehicle via LIN.
+2. Offers optional functions including automatic wipers, automatic sunlight detection, automatic headlight control, anti-fog adjustment, and HUD control.
+3. Rain-sensing area ≥ 120mm².
+4.Wide-angle optical detection range and high-precision signal output.                                                                                                           5. Supports functions like rain-sensing window closure, winter mode, false-wipe prevention check, and functional safety strategies.
+6. Custom Bootloader, supports OTA updates."
+,,阳光光线传感器         Light Senser,阳光光线传感器,阳光光线传感器主要用于检测入射到驾驶舱的阳光强度以及车外环境光的亮度，并将信号发送给空调控制器进行温度补偿，控制空调出风口风量大小，以及将信号给整车进行自动大灯的控制,"1、激光可调节，产品输出精度和一致性高；
+2、宽角度的检测范围10°~170°；
+3、过滤光谱，避免杂光干扰；
+4、集成温度补偿功能，降低温漂；
+5、便携式安装和更换；
+6、模块化设计，变型开发快，功能可扩展；"
+,,,Light Senser,"The sunlight and light sensor is mainly used to detect the intensity of sunlight entering the cabin and the intensity of ambient light outside the vehicle. It sends this signal to the air conditioning controller for temperature compensation, controlling the airflow volume from the AC vents, and also provides the signal to the vehicle for automatic headlight control.","1. Laser adjustable, ensuring high product output accuracy and consistency.
+2. Wide detection angle range (10° to 170°)
+3. Spectral filtering to avoid stray light interference.
+4. Integrated temperature compensation function to reduce temperature drift.
+5. Easy installation and replacement.
+6. Modular design for fast variant development and functional expandability."
+,,座椅传感器                 Seat Position Sensor         ,座椅位置传感器,        一种安装在座椅导轨上的位置传感器，能够通过霍尔开关芯片检测座椅在移动时的磁感应强度变化，来反馈座椅的位置，最后反馈到安全气囊控制单元，并通过控制单元的反馈，来实现不同的档位的爆破程度。,"1.高灵敏度磁场检测，误差率低至±0.5%，提升设备定位精度；
+2.提供电流信号输出，减少模拟信号处理的复杂性；
+3.高度可调的设计实现了Z向的安装灵活性，使其适用于不同的车型；"
+,,,Seat Position Sensor,"The seat position sensor is a position sensor installed on the seat rail. It detects changes in magnetic field strength as the seat moves via a Hall switch chip to provide feedback on the seat position. This information is ultimately relayed to the airbag control unit, which uses the feedback to implement different levels of deployment force.","1. High-sensitivity magnetic field detection, error rate as low as ±0.5%, improving device positioning accuracy.
+2. Provides current signal output, reducing the complexity of analog signal processing.
+3. Highly adjustable design offers installation flexibility in the Z-direction, making it suitable for different vehicle models."
+,,摄像头  Camera,1.3M车载摄像头,DQQ1000 是一款专为车载场景打造的高性能超广角摄像头模组，基于车规级 CMOS 图像传感器与 串行器设计，可在 -40℃~+85℃ 极端环境下稳定输出 1280×960@30fps 高清图像，IP67 防护等级与 195° 超广角视野，为行车安全提供可靠保障。,"1. LOFIC CIS 高动态成像：最高 130dB 动态范围，明暗剧烈变化场景下输出无损画质与真实色彩
+2. F1.6 大光圈暗光增强：相比常规 F2.0 镜头进光量提升约 60%，显著优化夜间与低光环境成像效果
+3. LED 闪烁抑制（LFM）：有效消除 LED 光源频闪干扰，保证图像清晰稳定
+4. 195° 超广角无盲区：水平视场角达 195°，大幅减少行车视野盲区，提升主动安全
+5. 车规级高可靠设计：IP67 防护（镜头 IP69K）、-40℃~+85℃宽温工作，适配严苛车载环境
+6. 高速稳定传输：GMSL 串行输出，支持 1280×960@30fps，满足车载系统实时性要求"
+,,,1.3M vehicle-mounted camera ,"The 1.3M vehicle-mounted camera supports LVDS data transmission. It is a high-performance ultra-wide-angle camera module specifically designed for in-vehicle applications. Based on an automotive-grade CMOS image sensor and serializer design, it can stably output 1280×960@30fps high-definition images in extreme environments ranging from -40°C to +85°C. With an IP67 protection rating and a 195° ultra-wide field of view, it provides reliable assurance for driving safety.","1. LOFIC CIS High Dynamic Range Imaging: Up to 130dB dynamic range, delivering lossless image quality and true colors in scenes with dramatic light changes.
+2. F1.6 Large Aperture for Low-Light Enhancement: Approximately 60% more light intake compared to conventional F2.0 lenses, significantly improving imaging performance in nighttime and low-light environments.
+3. LED Flicker Mitigation (LFM): Effectively eliminates flicker interference from LED light sources, ensuring clear and stable images. 4. 195° Ultra-Wide Angle with No Blind Spots: Horizontal field of view reaches 195°, greatly reducing driving blind spots and enhancing active safety.
+5. Automotive-Grade High-Reliability Design: IP67 protection (lens IP69K), operates in -40°C to +85°C wide temperature range, suitable for harsh vehicle environments.
+6. High-Speed Stable Transmission: GMSL serial output, supports 1280×960@30fps, meeting the real-time requirements of vehicle systems."
+,传输类产品 TRANSMIT,线束总成 Harnesses,FAKRA线束,"FAKRA线束用于车载射频信号的传输，；例如AM/FM, GPS,车载电话，车载WIFI，360°摄像头，远程遥控等",采用射频信号传输技术，工作频率高，传输距离远
+,,,FAKRA,"FAKRA harnesses are used for transmitting radio frequency signals in vehicles, such as AM/FM, GPS, in-car phones, in-car WiFi, 360° cameras, remote controls, and more.","Utilizes RF signal transmission technology, high operating frequency, long transmission distance."
+,,,HSD线束,主要用于车内中控显示屏图像传输，以及高清摄像头图像传输,采用差分信号传输技术，传输速率大，抗干扰性能好
+,,,HSD,HSD (High-Speed Data) harnesses are mainly used for image transmission to center console displays and for high-definition camera image transmission in vehicles.,"Utilizes differential signal transmission technology, high transmission rate, good anti-interference performance.      "
+,,,低压线束,低压线束主要用于车内各个用电器的电路传输，例如车灯，ECU控制器，开关，发动机等,主要是电信号传输，是汽车电气系统的毛细血管
+,,,Ethernet,"Low-voltage harnesses are primarily used for circuit transmission to various electrical components in the vehicle, such as lights, ECU controllers, switches, engines, etc.","Primarily for electrical signal transmission, serving as the ""capillaries"" of the vehicle's electrical system."
+,,微动开关 Microswitch,移动开关,提供各类微动开关,"体积小
+灵敏度高
+可定制线束一体"
+,,,Microswitch,Provides various types of Microswitches.,"1. Small size.
+2. High sensitivity.
+3. Customizable with integrated wiring harness."
+,,连接线 Connecting wire,连接线,提供各类低压、电源连接线,尺寸、功能、材料可定制
+,,,Connecting wire,Provides various types of low-voltage and power connection wires.,"Customizable in size, function, and material."
+,,"压接连接器
+
+Crimp connector",冷压端子,冷压端子是一种用于实现电气连接的配件产品，属于电子连接器领域，广泛应用于电力、电子和通讯系统中，通过机械压接方式连接导线而无需焊接或螺丝固定。其种类包括圆形预绝缘端子、叉形预绝缘端子、PCB板端子、五金连续端子等二十余种类型，主体材料多为铜或铝以保障导电性和耐腐蚀性,"‌1、加工便捷
+2、连接牢固可靠
+3、电气性能稳定‌
+4、环境适应性强‌
+5、安装高效便捷
+6、经济性好‌："
+,,,Cold-pressed terminal ,"A cold-pressed terminal is an accessory product used to achieve electrical connections, belonging to the field of electronic connectors. It is widely used in power, electronics, and communication systems. It connects wires by mechanical crimping without the need for soldering or screw fixing. Its types include over twenty varieties, such as circular pre-insulated terminals, forked pre-insulated terminals, PCB board terminals, and hardware continuous terminals. The main materials are mostly copper or aluminum to ensure conductivity and corrosion resistance.","1. Convenient processing.
+2. Firm and reliable connection.
+3. Stable electrical performance.
+4. Strong environmental adaptability . ‌
+5. Efficient and convenient installation.
+6. Good economy."
+,,板间连接器             Board-to-Board Connector,板间连接器 ,用于控制器、传感器等的板间连接,"1、面相电子传感器、控制器应用
+2、可定制开模
+2、提供实验验证"
+,,,Board-to-Board Connector,"Board-to-board connectors are used for connections between boards in controllers, sensors, and other electronic units.","1. Designed for electronic sensor and controller applications.
+2. Customizable mold opening.
+3. Provides experimental verification."
+,,,,,
+,,连接器端子       Connector Housing,连接器端子       Connector Terminal ,连接器又称护套、接插件、塑壳，是电子工程领域用于电路导通的核心组件，由接触件、外壳、绝缘体及附件四大结构组成 。其通过阴阳接触件插合传递电流，实现实现电气连接、传输电能和信号。,连接器通过其独特的结构设计，如插头与插座的配合，使得电子设备在组装、维修或升级时能够方便地连接或断开，从而大大提高了设备的灵活性和可维护性。产品符合QC/T1067、USCAR-2等标准要求。
+,,,接线端子            Terminal Block,,
+,,连接器塑壳     Connector Housing,密封连接器   Waterproof Connector,,
+,,,非密封连接器  Unsealed Connector ,,
+,,,配电盒         Distribution Box,,
+,,,,"A connector, also known as a housing, plug/socket, or plastic shell, is a core component in the field of electronic engineering used for circuit conduction. It consists of four main structural parts: contacts, shell, insulator, and accessories. It transmits current by mating male and female contacts to achieve electrical connections and transmit electrical energy and signals.","Through their unique structural design, such as the mating of plugs and sockets, connectors enable convenient connection or disconnection of electronic devices during assembly, repair, or upgrading, greatly enhancing equipment flexibility and maintainability. Products comply with standards such as QC/T1067 and USCAR-2."
+,,,,,
+,控制类产品 CONTROLS ,电动汽车通讯控制器EVCC：                    (Electric Vehicle Communication Controller) ,"EVCC一代
+", EVCC（电动汽车通讯控制器）是安装于电动汽车中的通信控制器，用于CAN通讯与PLC（电力载波通讯）的协议转换，实现车辆与充电设备端SECC之间加密通信或车辆与SECC之间的数据传输。,"1、支持国标及欧标电动车连接欧标充电设备充电，兼容交、直流充电
+2、支持ISO15118、DIN70121和GB/T27930标准
+3、通过标准CAN接口与BMS通讯
+4、低功耗休眠功能，可通过CAN、PP、CP唤醒，可通过A+/A-、CC2唤醒其他设备
+5、统一诊断服务（UDS），符合ISO14229及ISO15765标准
+6、定制Bootloader，支持OTA升级，充电策略制定以及智能充电"
+,,,EVCC charging controller,"EVCC (Electric Vehicle Communication Controller) is a communication controller installed in electric vehicles. It is used for protocol conversion between CAN communication and PLC (Power Line Communication), enabling encrypted communication between the vehicle and the charging equipment's SECC (Supply Equipment Communication Controller), or data transmission between the vehicle and SECC.","1. Supports charging of Chinese and European standard electric vehicles at European standard charging equipment, compatible with AC and DC charging.
+2. Supports ISO15118, DIN70121, and GB/T27930 standards.
+3. Communicates with BMS via standard CAN interface.
+4. Low-power sleep function, wake-up via CAN, PP, CP, and can wake up other devices via A+/A-, CC2.  
+5. Unified Diagnostic Services (UDS), compliant with ISO14229 and ISO15765 standards.
+6. Custom Bootloader, supports OTA updates, charging strategy formulation, and smart charging."
+,,,EVCC二代,EVCC（电动汽车通讯控制器）是安装于电动汽车中的通信控制器，用于CAN通讯与PLC（电力载波通讯）的协议转换，实现车辆与充电设备端SECC之间加密通信或车辆与SECC之间的数据传输。,"1、支持国标及欧标电动车连接欧标充电设备充电，兼容交、直流充电
+2、支持ISO15118-20、DIN70121和GB/T27930标准
+3、通过标准CAN接口与BMS通讯
+4、低功耗休眠功能，可通过CAN、PP、CP唤醒，可通过A+/A-、CC2唤醒其他设备
+5、统一诊断服务（UDS），符合ISO14229及ISO15765标准
+6、定制Bootloader，支持OTA升级，充电策略制定以及智能充电，预留交流V2X功能"
+,,,EVCC charging controller,"EVCC (Electric Vehicle Communication Controller) is a communication controller installed in electric vehicles. It is used for protocol conversion between CAN communication and PLC (Power Line Communication), enabling encrypted communication between the vehicle and the charging equipment's SECC (Supply Equipment Communication Controller), or data transmission between the vehicle and SECC.","1. Supports charging of Chinese and European standard electric vehicles at European standard charging equipment, compatible with AC and DC charging.
+2. Supports ISO15118, DIN70121, and GB/T27930 standards.
+3. Communicates with BMS via standard CAN interface.
+4. Low-power sleep function, wake-up via CAN, PP, CP, and can wake up other devices via A+/A-, CC2.  
+5. Unified Diagnostic Services (UDS), compliant with ISO14229 and ISO15765 standards.
+6. Custom Bootloader, supports OTA updates, charging strategy formulation, smart charging, with reserved AC V2X functionality."
+,,天窗控制器         Sunroof controller,天窗控制器,是整个天窗系统的控制中心，负责整个系统控制命令的判定和控制策略的执行。通过控制电机的正反转，从而实现天窗或者卷帘的打开于关闭（一拖二，可同时实现玻璃和卷帘的控制），具有防夹功能，基于hall的速度检测原理，可保证位置控制的精确性和防夹的可靠性，同时支持语音功能、遥控、APP控制等功能,"1、具有防夹保护功能（符合国标GB11552-2009/美标FMVSS118/
+欧标2000/4 EG防夹标准），基于hall的速度检测原理，可保证位置控制的精确性和防夹的可靠性；
+2、支持位置自动校准、电机热保护等功能；
+3、具备滑道自适应功能，降低机械温度导致的误防夹问题；
+4、具备堵转保护、诊断保护、过流保护等功能；
+5、支持CAN/LIN接口，与整车进行信号交互，支持语音、遥控、蓝牙控制等功能；
+6、支持PWM调速功能，可配置同时控制多个电机（如一拖一/一拖二）
+7、定制Bootloader，支持OTA升级
+8、支持功能安全"
+,,,Sunroof controller,"The sunroof controller is the control center of the entire sunroof system, responsible for determining system control commands and executing control strategies. By controlling the forward and reverse rotation of the motor, it opens or closes the sunroof or roller blind (one controller driving two loads, enabling simultaneous control of the glass and roller blind). It features an anti-pinch function. Based on Hall-effect speed detection principles, it ensures precise position control and reliable anti-pinch performance. It also supports voice control, remote control, and APP control functions.","1. Features anti-pinch protection (compliant with national standard GB11552-2009 / US standard FMVSS118 / European standard 2000/4 EG). Based on Hall-effect speed detection, it ensures precise position control and reliable anti-pinch performance.
+2. Supports functions like automatic position calibration and motor thermal protection.
+3. Features slide-way adaptive function, reducing false anti-pinch issues caused by mechanical temperature variations.                              4.  Includes stall protection, diagnostic protection, overcurrent protection, and other functions.
+5. Supports CAN/LIN interface for signal interaction with the vehicle, supports voice control, remote control, Bluetooth control, and other functions.
+6. Supports PWM speed regulation function, configurable to control multiple motors simultaneously (e.g., one driver controlling one or two loads).
+7. Custom Bootloader, supports OTA updates.
+8. Supports functional safety.     "
+,执行类产品  ACTUATE,洗涤系统           Automobile washing system,风窗清洗,汽车风窗洗涤是保障驾驶视野清晰、提升行车安全的核心功能系统，专为全天候、全路况玻璃清洁设计，与雨刮系统协同工作，快速清除灰尘、虫胶、油膜、雨雪污渍，保持前挡风玻璃通透无遮挡,"1.稳定喷射，快速覆盖目标玻璃区域，配合雨刮高效去除灰尘、虫胶、泥污
+2.耐高低温、抗老化，-40℃～90℃环境稳定运行，安全可靠
+3.喷嘴角度精准，扇形 / 柱状喷射均匀，覆盖合理，减少干刮，保护雨刮胶条与玻璃"
+,,,windshield washer,"The automotive windshield washer system is a core functional system that ensures clear driving vision and enhances driving safety. Designed for all-weather, all-road glass cleaning, it works in conjunction with the wiper system to quickly remove dust, insect residue, oil film, rain, snow, and stains, keeping the front windshield clear and unobstructed.","1. Stable spray, quickly covers the target glass area, effectively removes dust, insect residue, and mud when working with wipers.
+2. Resistant to high and low temperatures, aging-resistant, operates stably and reliably in -40°C to 90°C environments.
+3. Precise nozzle angle, uniform fan/spray pattern, reasonable coverage, reduces dry wiping, protects wiper blades and glass."
+,,,大灯清洗,大灯清洗系统是保障夜间及恶劣天气行车照明清晰度的主动安全部件，专为快速清除大灯灯罩表面的灰尘、泥污、虫尸、雨雪污渍而设计,"1.隐藏式设计
+2.耐高低温，-40℃～90℃环境稳定运行，安全可靠
+3.耐腐蚀、密封好、寿命长"
+,,, headlight cleaning ,"The headlight cleaning system is an active safety component that ensures clear lighting at night and in adverse weather conditions. It is specifically designed to quickly remove dust, mud, insect residue, rain, snow, and stains from the surface of the headlight lens.","1. Concealed design
+2. Resistant to high and low temperatures, operates stably and reliably in -40°C to 90°C environments.
+3. Corrosion-resistant, good sealing, long service life"
+,,,激光雷达清洗,激光雷达清洗系统是智能驾驶、高阶辅助驾驶（ADAS）的感知层核心清洁保障装置，专为维持激光雷达镜面高精度、无遮挡工作状态设计,"1.精准喷射，定向微喷设计，出水角度与激光雷达探测面高度匹配，少量液体即可快速清除灰尘、泥污
+2.极紧凑隐藏式结构，可嵌入式集成安装，不破坏车身外观与气动布局，工作时微伸出，清洁后自动复位，不影响感知视野
+3.耐高低温，-40℃～90℃环境稳定运行，安全可靠"
+,,,LiDAR cleaning ,"The LiDAR cleaning system is a core cleaning assurance device for the perception layer of intelligent driving and advanced driver-assistance systems (ADAS). It is specifically designed to maintain the high-precision, unobstructed working condition of the LiDAR lens.","1. Precision injection with a targeted micro-spray design; the spray  angle is precisely matched to the LiDAR detection surface. A small amount of liquid quickly removes dust and mud.  
+2. Ultra-compact, concealed structure for embedded integration that does not disrupt the vehicle's appearance or aerodynamic profile. It extends slightly during operation and automatically retracts after cleaning, ensuring no interference with the perception field of view.
+3. Resistant to high and low temperatures, operating stably and reliably in environments ranging from -40°C to 90°C."
+,,,摄像头清洗,车载摄像头清洗系统是智能驾驶、全景影像、行车辅助的视觉感知清洁核心部件，专为保障前视、环视、后视等车载摄像头全天候清晰成像设计,"1.精准喷射，定向微喷设计，出水角度与摄像头镜面高度匹配，少量液体即可快速清除灰尘、泥污
+2.体积小巧
+3.耐高低温，-40℃～90℃环境稳定运行，安全可靠"
+,,,camera cleaning ,"The vehicle-mounted camera cleaning system is a core component for maintaining visual perception cleanliness in intelligent driving, panoramic imaging, and driving assistance systems. It is specifically designed to ensure clear imaging for front-view, surround-view, rear-view, and other vehicle-mounted cameras in all weather conditions.","1. Precision injection, targeted micro-spray design, the spray angle is highly matched with the camera lens surface. A small amount of liquid quickly removes dust and mud.
+2. Compact size
+3. Resistant to high and low temperatures, operates stably and reliably in -40°C to 90°C environments."
+,,精密注塑             Precision inection molded,"嵌件注塑 - 接插件 
+",接插件用于实现电路快速连接、断开，并保证电信号 / 电源稳定可靠传输。,1、实现电路快速连接、断开，并保证电信号 / 电源稳定可靠传输。
+,,,Insert injection molding - connectors,"Connectors are used to achieve quick connection and disconnection of circuits, ensuring stable and reliable transmission of electrical signals/power.","Enables quick connection and disconnection of circuits, ensuring stable and reliable transmission of electrical signals/power."
+,,,"嵌件注塑 - 接插件 
+",连接器用于实现电路快速连接、断开，并保证电信号 / 电源稳定可靠传输。,1、实现电路快速连接、断开，并保证电信号 / 电源稳定可靠传输。
+,,,Insert injection molding - connectors,"Connectors are used to achieve quick connection and disconnection of circuits, ensuring stable and reliable transmission of electrical signals/power.","Enables quick connection and disconnection of circuits, ensuring stable and reliable transmission of electrical signals/power."
+,,,注塑-线束支架 ,线束支架用于把散乱的线束规整、固定在车身 / 底盘指定位置，防止行驶中晃动、拉扯、窜动，避免接头松脱。,"1、固定与限位功能
+2、线束防磨损功能
+3、规划线束走向，实现布线标准化
+4、采用螺栓固定"
+,,,Injection molding - wire harness bracket,"The wire harness bracket is used to organize and secure scattered wire harnesses to designated positions on the vehicle body or chassis. It prevents shaking, pulling, and movement during driving, avoiding loose connections.","1. Fixing and limiting functions.
+2. Wire harness anti-wear function.
+3. Plans the harness routing for standardized wiring.
+4. Fixed with bolts."
+,,,嵌件注塑- 汽车前部支架,安装于电池包内部，用于固定和保护高压动力线束及低压信号线束的结构件,"1、确保高压线束与其他部件保持安全距离，防止磨损导致的漏电或短路
+2、在车辆振动工况下，为线束提供缓冲和固定，防止连接器松动"
+,,,Insert Injection Molding - Automotive Front Bracket,A structural component installed inside the battery pack used to secure and protect high-voltage power harnesses and low-voltage signal harnesses.,"1. Ensures safe distance between high-voltage harnesses and other components, preventing leakage or short circuits caused by wear.
+2. Provides cushioning and fixation for harnesses under vehicle vibration conditions, preventing connector loosening."
+,,,注塑-精密注塑,"汽车后背门锁盖是一个集成了多种功能的小型精密部件,安装于后背门内饰板上的可拆卸式盖板，用于遮蔽背门锁安装机构，并提供紧急手动开启通道","1、覆盖锁体安装点，保证内饰外观整洁
+2、不借助工具即可徒手拆卸，便于执行机械应急解锁
+3、全卡接结构，利用塑料卡勾与背门饰板固定，安装牢固且无振动异响"
+,,,Injection molding - precision injection molding,"The automotive tailgate lock cover is a small precision component integrating multiple functions. It is a removable cover installed on the tailgate interior trim panel, used to conceal the tailgate lock mounting mechanism and provide an emergency manual opening channel.","1. Covers the lock body mounting points, ensuring a neat interior appearance.
+2. Can be disassembled by hand without tools, facilitating mechanical emergency unlocking.
+3. Full snap-fit structure, fixed to the tailgate trim panel using plastic hooks, secure installation with no vibration noise."
+,,,注塑-电子控制器外壳,可定制、开模制作各类电子控制器、执行器外壳，满足各类定制化要求,"1、支持定制，提供设计、仿真、开模。
+2、防护等级可达IP40至IP69"
+,,,Injection molding - electronic controller housing,"Customizable, mold opening for various electronic controller and actuator housings, meeting various customization requirements.","1. Supports customization, offering design, simulation, and mold opening services.
+2. Protection level can reach from IP40 to IP69."
+,,风门执行器      Automobile damper actuator,空调箱风门执行器,空调箱风门执行器用于移动和控制汽车空调和管道部件中的阀门开度，进而控制冷空气和热空气的混合比例，调节车内温度和改变空气流向，以确保车内不同区域的舒适度。,"1、LIN自动寻址；
+2、LIN通讯和诊断功能；
+3、SVPWM无刷电机控制；
+4、多种自我诊断和保护功能；"
+,,,Automobile damper actuator,"The automotive damper actuator is used to move and control the opening angle of valves within the vehicle's air conditioning and ducting system components. This controls the mixing ratio of cold and hot air, regulates the interior temperature, and directs airflow to ensure comfort in different areas of the cabin.","1. LIN automatic addressing.
+2. LIN communication and diagnostic functions.
+3. SVPWM brushless motor control.
+4. Various self-diagnosis and protection functions."

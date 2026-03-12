@@ -38,7 +38,7 @@ var UI = {
     footerLinks: ['来访路线', '在线反馈', '隐私保护', '法律条款'],
     copy: '©2026 江苏日盈电子股份有限公司 版权所有',
     addr: '江苏省常州市经开区潞横路2788号',
-    navMenuItems: ['公司介绍', '产品中心', '人才招聘', '供应链', '投资者关系', '新闻中心', '联系我们'],
+    navMenuItems: ['关于我们', '产品', '供应商', '联系我们', '社会责任'],
   },
   en: {
     navProducts: ['Sensing', 'Transmission', 'Control', 'Execution'],
@@ -62,8 +62,38 @@ var UI = {
     footerLinks: ['Visit Us', 'Feedback', 'Privacy', 'Legal'],
     copy: '©2026 Jiangsu Riying Electronics Co., Ltd. All Rights Reserved',
     addr: '2788 Luheng Road, Changzhou Economic Development Zone, Jiangsu',
-    navMenuItems: ['About Us', 'Products', 'Careers', 'Supply Chain', 'Investor Relations', 'News', 'Contact'],
+    navMenuItems: ['About Us', 'Products', 'Suppliers', 'Contact', 'SR'],
   }
+};
+
+var NAV_ZH = {
+  nav_about:              '关于我们',
+  nav_products:           '产品',
+  nav_suppliers:          '供应商',
+  nav_contact:            '联系我们',
+  nav_sr:                 '社会责任',
+  mega_about_main:        '关于日盈',
+  mega_about_sub_intro:   '公司简介',
+  mega_about_sub_history: '发展历程',
+  mega_about_sub_vision:  '愿景使命',
+  mega_about_sub_honor:   '荣誉资质',
+  mega_about_chair:       '主席致辞',
+  mega_about_clients:     '合作客户',
+  mega_about_mfg:         '生产基地',
+  mega_prod_1:            '感知',
+  mega_prod_2:            '传输',
+  mega_prod_3:            '控制',
+  mega_prod_4:            '执行',
+  mega_sup_1:             '准入流程',
+  mega_sup_2:             '采购模块',
+  mega_sup_3:             '供应商联系',
+  mega_contact_1:         '来访路线',
+  mega_contact_2:         '意见反馈',
+  mega_sr_1:              '社会责任',
+  footer_visit:           '来访路线',
+  footer_feedback:        '在线反馈',
+  footer_privacy:         '隐私保护',
+  footer_legal:           '法律条款',
 };
 
 function t(key) {
